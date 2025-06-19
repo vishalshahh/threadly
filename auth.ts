@@ -18,7 +18,7 @@ export const {handlers:{GET, POST}, auth,signIn, signOut} = NextAuth({
     callbacks: {
         async session({ user, session }) {
             if (session && user) {
-                session.user.id = userid
+                session.user.id = user.id
             }
             return session
         }
