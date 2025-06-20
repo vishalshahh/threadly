@@ -23,8 +23,6 @@ Here’s a quick look at Threadly in action:
   <img src="public/threadly.png" alt="Threadly Home" width="700" />
 </p>
 
-> 📌 *Make sure to place your images in `public/screenshots/` folder or use direct image URLs from services like GitHub, Cloudinary, or Imgur.*
-
 ---
 
 ## 🛠️ Tech Stack
