@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { auth } from "@/auth";
 import AuthHeader from "./Auth-Header";
 import { Input } from "./ui/input";
+import SearchInput from "./search-input";
 
 
 const Header = async () => {
@@ -20,13 +21,11 @@ const Header = async () => {
                             A Simple Threading App
                         </p>
                     </div>
-              <div className="flex justify-between ml-100 pl-100">
-                <Input
-                  type="text"
-                  placeholder="Search threads..."
-                  className="ml-20 pl-20"
-                />
-              </div>
+                    <div>
+                        <Suspense>
+                            <SearchInput />
+                        </Suspense>
+                    </div>
 
                     {/* Navigation Buttons */}
                     <div className="flex items-center gap-3">

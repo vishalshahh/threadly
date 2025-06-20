@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import Header from "@/components/Header";
-import TopicCreateForm from "@/components/topics/TopicCreateForm";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,18 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <div className="min-h-screen bg-background">
-            <Header />
-            <main className="container mx-auto px-4 py-8">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold mb-4 text-foreground">Welcome to Thready</h2>
-                <p className="text-xl text-muted-foreground">Start your threading journey here!</p>
-                <div className=" pt-4">
-                  <TopicCreateForm />
-                </div>
-              </div>
-            </main>
-          </div>
+          <Header/>
           {children}
         </Providers>
       </body>
